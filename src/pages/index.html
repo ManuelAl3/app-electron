@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://raw.githubusercontent.com; connect-src 'self' https://pokeapi.co"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://raw.githubusercontent.com; connect-src 'self' https://pokeapi.co"
+    />
+    <title>Pokedex!</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <div class="search-container">
+      <div class="search-wrapper">
+        <input type="text" id="search-input" placeholder="Search Pokémon..." class="search-input">
+        <div class="search-icon">🔍</div>
+      </div>
+      
+      <div class="filters-container">
+        <select id="type-filter" class="filter-select">
+          <option value="">All Types</option>
+        </select>
+        <select id="sort-filter" class="filter-select">
+          <option value="name-asc">Name (A-Z)</option>
+          <option value="name-desc">Name (Z-A)</option>
+          <option value="id-asc">ID (Low to High)</option>
+          <option value="id-desc">ID (High to Low)</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="pokemons-list"></div>
+    <script src="../render.js"></script>
+  </body>
+</html>

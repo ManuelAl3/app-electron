@@ -50,7 +50,7 @@ module.exports = {
       config: {
         repository: {
           owner: 'ManuelAl3',
-          name: 'app-electron'
+          name: 'app-pokedex-electron'
         },
         prerelease: false,
         draft: true
